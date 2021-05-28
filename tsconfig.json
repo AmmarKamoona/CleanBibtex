@@ -1,0 +1,20 @@
+{
+	"compilerOptions": {
+		"module": "ES6",
+		"esModuleInterop": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitReturns": true,
+		"strict": true,
+		"removeComments": true,
+		"resolveJsonModule": true,
+		"moduleResolution": "Node",
+		"baseUrl": ".",
+		"lib": ["ESNext", "DOM", "DOM.Iterable"],
+		"target": "ES6",
+		"paths": {
+			"*": ["../node_modules/*"]
+		},
+		"rootDir": "./"
+	},
+	"include": ["./src/*", "./test/*", "./docs/*", "./build.ts"]
+}

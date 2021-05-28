@@ -1,0 +1,35 @@
+{
+	"name": "bibtex-tidy",
+	"version": "1.7.1",
+	"description": "Tidy bibtex files",
+	"homepage": "https://github.com/FlamingTempura/bibtex-tidy",
+	"main": "./bibtex-tidy.js",
+	"bin": {
+		"bibtex-tidy": "./bin/bibtex-tidy"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.14.2",
+		"@babel/preset-env": "^7.14.2",
+		"@types/babel__core": "^7.1.14",
+		"@types/codemirror": "^5.60.0",
+		"@types/node": "^15.0.3",
+		"codemirror": "^5.61.0",
+		"esbuild": "^0.11.20",
+		"esbuild-register": "^2.5.0",
+		"nyc": "^15.1.0",
+		"puppeteer": "^9.1.1",
+		"typescript": "^4.2.4"
+	},
+	"scripts": {
+		"build": "node -r esbuild-register build.ts",
+		"test": "npm run build && node -r esbuild-register test/index.ts",
+		"typecheck": "tsc --noEmit",
+		"cover": "NODE_ENV=coverage nyc --reporter html node -r esbuild-register test/index.ts"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/FlamingTempura/bibtex-tidy.git"
+	},
+	"author": "FlamingTempura",
+	"license": "MIT"
+}
